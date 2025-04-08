@@ -57,18 +57,11 @@ The system’s dynamics are governed by Newton’s laws for translation and rota
   $$
   \ddot{\theta} = \frac{T \sin(\phi) \cdot l}{2 J}.
   $$
-  Torque arises from the perpendicular thrust component $T \sin(\phi)$ acting at distance $l/2$ from the center of mass. Positive $\phi$ (counterclockwise from centerline) causes clockwise rotation (positive $\ddot{\theta}$), consistent with the clockwise $\theta$ convention.
 
 ### State-Space Representation
-Define the state vector:
 $$
 S = [x, y, \theta, \dot{x}, \dot{y}, \dot{\theta}],
 $$
-and its derivative:
-$$
-\dot{S} = [\dot{x}, \dot{y}, \dot{\theta}, \ddot{x}, \ddot{y}, \ddot{\theta}].
-$$
-The full dynamics are:
 $$
 \dot{S} = \begin{bmatrix}
 \dot{x} \\
