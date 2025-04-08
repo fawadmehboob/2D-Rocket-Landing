@@ -87,4 +87,4 @@ Initially, the rocket is in free fall, subject to gravity, with arbitrary initia
 The interplay between $F$ and $\tau$ allows the controller to balance translational and rotational dynamics, ensuring the rocket lands safely at $(x_{\text{target}}, 0)$ with $\dot{x} = 0$, $\dot{y} = 0$, and an appropriate $\theta$ (e.g., $\theta = \frac{\pi}{2}$ for upright landing).
 
 ### Implementation Notes
-This repository will serve as a foundation for simulating and testing the Lyapunov controller. Future sections may include model parameters ($m$, $l$, $g$), simulation code, and control law derivations, all aimed at achieving the outlined landing objective.
+This repository will serve as a foundation for simulating and testing the Lyapunov controller. Future sections may include simulation code and control law derivations, all aimed at achieving the outlined landing objective.
