@@ -14,8 +14,6 @@ The rocket is modeled as a rigid body with a mass $m$ and a characteristic lengt
 
 This configuration allows the rocket to manipulate both its translational position and rotational orientation within the 2D plane, providing the necessary control authority to achieve the desired landing objectives.
 
-## Rocket Landing System Dynamics
-
 ### Coordinate System and Variables
 - $x$: Horizontal position of the center of mass (positive right).
 - $y$: Vertical position of the center of mass (positive up).
@@ -29,34 +27,6 @@ This configuration allows the rocket to manipulate both its translational positi
 
 ### Equations of Motion
 The system’s dynamics are governed by Newton’s laws for translation and rotation. Thrust is applied at the bottom, offset $l/2$ from the center of mass, with components influenced by both $\theta$ and $\phi$.
-
-#### Translational Dynamics
-- **Horizontal ($x$-direction):**
-  $$
-  m \ddot{x} = T \sin(\theta - \phi),
-  $$
-  $$
-  \ddot{x} = \frac{T \sin(\theta - \phi)}{m}.
-  $$
-  The thrust component $T \sin(\theta - \phi)$ acts horizontally, derived from the global angle of thrust ($\theta - \phi$) relative to the vertical.
-
-- **Vertical ($y$-direction):**
-  $$
-  m \ddot{y} = T \cos(\theta - \phi) - m g,
-  $$
-  $$
-  \ddot{y} = \frac{T \cos(\theta - \phi)}{m} - g.
-  $$
-  The vertical thrust component $T \cos(\theta - \phi)$ opposes gravity $m g$.
-
-#### Rotational Dynamics
-- **Angular acceleration ($\theta$):**
-  $$
-  J \ddot{\theta} = T \sin(\phi) \cdot \frac{l}{2},
-  $$
-  $$
-  \ddot{\theta} = \frac{T \sin(\phi) \cdot l}{2 J}.
-  $$
 
 ### State-Space Representation
 $$
