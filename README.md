@@ -29,8 +29,8 @@ This configuration allows the rocket to manipulate both its translational positi
 The system’s dynamics are governed by Newton’s laws for translation and rotation. Thrust is applied at the bottom, offset $l/2$ from the center of mass, with components influenced by both $\theta$ and $\phi$.
 
 $$
-\ddot{x} = \frac{T \sin(\theta + \phi)}{m} \\
-\ddot{y} = \frac{T \cos(\theta + \phi)}{m} - g \\
+\ddot{x} = \frac{T \sin(\theta + \phi)}{m} \\;
+\ddot{y} = \frac{T \cos(\theta + \phi)}{m} - g \\;
 \ddot{\theta} = \frac{T \sin(\phi) \cdot l}{2 J} 
 $$
 
