@@ -49,6 +49,14 @@ $$
 \end{bmatrix}.
 $$
 
+### Action Space
+$$
+a = \begin{bmatrix}
+T \\
+\phi \\
+\end{bmatrix}.
+$$
+
 ### Notes
 - The system is nonlinear due to the trigonometric terms $\sin(\theta - \phi)$, $\cos(\theta - \phi)$, and $\sin(\phi)$.
 - Control inputs $T$ and $\phi$ allow manipulation of all degrees of freedom, though the system is underactuated (2 inputs, 3 DOFs).
