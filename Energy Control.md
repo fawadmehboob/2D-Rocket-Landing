@@ -60,7 +60,7 @@ $$
 L = \frac{1}{2} E_{\text{tot}}^2.
 $$
 
-Since $E_{\text{tot}}^2 \geq 0$, $L \leq 0$, with $L = 0$ when $E_{\text{tot}} = 0$.
+Since $E_{\text{tot}}^2 \geq 0$, $L \geq 0$, with $L = 0$ when $E_{\text{tot}} = 0$.
 
 ### Time Derivative of Lyapunov Function
 
