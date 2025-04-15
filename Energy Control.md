@@ -57,7 +57,7 @@ $$
 The Lyapunov function is:
 
 $$
-L = -\frac{1}{2} E_{\text{tot}}^2.
+L = \frac{1}{2} E_{\text{tot}}^2.
 $$
 
 Since $E_{\text{tot}}^2 \geq 0$, $L \leq 0$, with $L = 0$ when $E_{\text{tot}} = 0$.
@@ -67,7 +67,7 @@ Since $E_{\text{tot}}^2 \geq 0$, $L \leq 0$, with $L = 0$ when $E_{\text{tot}} =
 Compute:
 
 $$
-\dot{L} = \frac{d}{dt} \left( -\frac{1}{2} E_{\text{tot}}^2 \right) = -E_{\text{tot}} \dot{E}_{\text{tot}}.
+\dot{L} = \frac{d}{dt} \left( \frac{1}{2} E_{\text{tot}}^2 \right) = E_{\text{tot}} \dot{E}_{\text{tot}}.
 $$
 
 For $\dot{E}_{\text{tot}}$:
@@ -103,7 +103,7 @@ $$
 Thus:
 
 $$
-\dot{L} = -E_{\text{tot}} T \left[ \frac{l \dot{\theta} \sin(\phi)}{2} + \dot{x} \sin(\phi + \theta) + \dot{y} \cos(\phi + \theta) \right].
+\dot{L} = E_{\text{tot}} T \left[ \frac{l \dot{\theta} \sin(\phi)}{2} + \dot{x} \sin(\phi + \theta) + \dot{y} \cos(\phi + \theta) \right].
 $$
 
 ### Control Derivation
