@@ -117,35 +117,35 @@ $$
 so:
 
 $$
-\dot{L} = -E_{\text{tot}} T u.
+\dot{L} = E_{\text{tot}} T u.
 $$
 
-Since $L \leq 0$, aim for $\dot{L} \geq 0$:
+Since $L \geq 0$, aim for $\dot{L} \leq 0$:
 - If $E_{\text{tot}} > 0$, require $T u \leq 0$.
 - If $E_{\text{tot}} < 0$, require $T u \geq 0$.
 
 Choose $\phi$:
 
 $$
-\sin(\phi + \theta) = -\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}}, \quad \cos(\phi + \theta) = -\frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}}.
+\sin(\phi + \theta) = \frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}}, \quad \cos(\phi + \theta) = \frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}}.
 $$
 
 Then, if $\dot{\theta} \approx 0$:
 
 $$
-u \approx -\sqrt{\dot{x}^2 + \dot{y}^2} \leq 0.
+u \approx \sqrt{\dot{x}^2 + \dot{y}^2} \leq 0.
 $$
 
 Set:
 
 $$
-T = k |E_{\text{tot}}|,
+T = -k |E_{\text{tot}}|,
 $$
 
 where $k > 0$, so:
 
 $$
-\dot{L} = -E_{\text{tot}} \cdot k |E_{\text{tot}}| \cdot u \geq 0,
+\dot{L} = E_{\text{tot}} \cdot k |E_{\text{tot}}| \cdot u \geq 0,
 $$
 
 since $u \leq 0$. If $u > 0$, adjust:
