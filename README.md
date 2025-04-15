@@ -43,8 +43,8 @@ $$
 \dot{x} \\
 \dot{y} \\
 \dot{\theta} \\
-\frac{T \sin(\theta - \phi)}{m} \\
-\frac{T \cos(\theta - \phi)}{m} - g \\
+\frac{T \sin(\theta + \phi)}{m} \\
+\frac{T \cos(\theta + \phi)}{m} - g \\
 \frac{T \sin(\phi) \cdot l}{2 J}
 \end{bmatrix}.
 $$
