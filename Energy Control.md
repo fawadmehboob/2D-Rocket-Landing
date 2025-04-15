@@ -51,6 +51,8 @@ Thus:
 $$
 E_{\text{tot}} = \frac{1}{2} \left( J \dot{\theta}^2 + m \dot{x}^2 + m \dot{y}^2 \right) + m g y.
 $$
+
+Compute:
 ### Lyapunov Function
 
 The Lyapunov function is:
@@ -65,6 +67,67 @@ Since $E_{\text{tot}}^2 \geq 0$, $L \geq 0$, with $L = 0$ when $E_{\text{tot}} =
 
 Compute:
 
+$$
+\dot{L} = \frac{d}{dt} \left( \frac{1}{2} E_{\text{tot}}^2 \right) = E_{\text{tot}} \dot{E}_{\text{tot}}.
+$$
+
+For $\dot{E}_{\text{tot}}$:
+
+$$
+E_{\text{tot}} = \frac{1}{2} J \dot{\theta}^2 + \frac{1}{2} m \dot{x}^2 + \frac{1}{2} m \dot{y}^2 + m g y,
+$$
+
+$$
+\dot{E}_{\text{tot}} = J \dot{\theta} \ddot{\theta} + m \dot{x} \ddot{x} + m \dot{y} \ddot{y} + m g \dot{y}.
+$$
+
+Substitute dynamics:
+
+$$
+\ddot{x} = \frac{T \sin(\phi + \theta)}{m}, \quad \ddot{y} = \frac{T \cos(\phi + \theta)}{m} - g, \quad \ddot{\theta} = \frac{T l \sin(\phi)}{2 J}.
+$$
+
+$$
+\dot{E}_{\text{tot}} = J \dot{\theta} \cdot \frac{T l \sin(\phi)}{2 J} + m \dot{x} \cdot \frac{T \sin(\phi + \theta)}{m} + m \dot{y} \cdot \left( \frac{T \cos(\phi + \theta)}{m} - g \right) + m g \dot{y}.
+$$
+
+Simplify:
+
+$$
+= \frac{T l \dot{\theta} \sin(\phi)}{2} + T \dot{x} \sin(\phi + \theta) + T \dot{y} \cos(\phi + \theta) - m g \dot{y} + m g \dot{y},
+$$
+
+$$
+\dot{E}_{\text{tot}} = T \left[ \frac{l \dot{\theta} \sin(\phi)}{2} + \dot{x} \sin(\phi + \theta) + \dot{y} \cos(\phi + \theta) \right].
+$$
+
+Thus:
+
+$$
+\dot{L} = E_{\text{tot}} T \left[ \frac{l \dot{\theta} \sin(\phi)}{2} + \dot{x} \sin(\phi + \theta) + \dot{y} \cos(\phi + \theta) \right].
+$$
+
+### Control Derivation
+
+Define:
+
+$$
+u = \frac{l \dot{\theta} \sin(\phi)}{2} + \dot{x} \sin(\phi + \theta) + \dot{y} \cos(\phi + \theta),
+$$
+
+which includes both the angular velocity term $\frac{l \dot{\theta} \sin(\phi)}{2}$ and the linear velocity terms $\dot{x} \sin(\phi + \theta) + \dot{y} \cos(\phi + \theta)$. Thus:
+
+$$
+\dot{L} = E_{\text{tot}} T u.
+$$
+
+Since $L \geq 0$, we aim for $\dot{L} \leq 0$ to ensure stability:
+- If $E_{\text{tot}} > 0$, require $T u \leq 0$.
+- If $E_{\text{tot}} < 0$, require $T u \geq 0$.
+
+To simplify, assume $\dot{\theta} \approx 0$, so the angular term is negligible:
+
+$$
 $$
 \dot{L} = \frac{d}{dt} \left( \frac{1}{2} E_{\text{tot}}^2 \right) = E_{\text{tot}} \dot{E}_{\text{tot}}.
 $$
