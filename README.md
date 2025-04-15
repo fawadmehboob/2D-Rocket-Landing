@@ -58,7 +58,7 @@ T \\
 $$
 
 ### Notes
-- The system is nonlinear due to the trigonometric terms $\sin(\theta - \phi)$, $\cos(\theta - \phi)$, and $\sin(\phi)$.
+- The system is nonlinear due to the trigonometric terms $\sin(\theta + \phi)$, $\cos(\theta + \phi)$, and $\sin(\phi)$.
 - Control inputs $T$ and $\phi$ allow manipulation of all degrees of freedom, though the system is underactuated (2 inputs, 3 DOFs).
 - Goal: Drive $S = [x, y, \theta, \dot{x}, \dot{y}, \dot{\theta}]$ to $[0, 0, 0, 0, 0, 0]$ for a vertical landing at the origin.
 
