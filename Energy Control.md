@@ -51,7 +51,6 @@ Thus:
 $$
 E_{\text{tot}} = \frac{1}{2} \left( J \dot{\theta}^2 + m \dot{x}^2 + m \dot{y}^2 \right) + m g y.
 $$
-
 ### Lyapunov Function
 
 The Lyapunov function is:
@@ -124,28 +123,32 @@ Since $L \geq 0$, aim for $\dot{L} \leq 0$:
 - If $E_{\text{tot}} > 0$, require $T u \leq 0$.
 - If $E_{\text{tot}} < 0$, require $T u \geq 0$.
 
-Choose $\phi$:
+Choose $\phi$ to align thrust opposite the velocity:
 
 $$
-\sin(\phi + \theta) = \frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}}, \quad \cos(\phi + \theta) = \frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}}.
+\sin(\phi + \theta) = -\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}}, \quad \cos(\phi + \theta) = -\frac{\dot{y}}{\sqrt{\dot{x}^2 + \dot{y}^2}},
+$$
+
+$$
+\phi = \arctan2(-\dot{x}, -\dot{y}) - \theta.
 $$
 
 Then, if $\dot{\theta} \approx 0$:
 
 $$
-u \approx \sqrt{\dot{x}^2 + \dot{y}^2} \leq 0.
+u \approx -\sqrt{\dot{x}^2 + \dot{y}^2} \leq 0.
 $$
 
 Set:
 
 $$
-T = -k |E_{\text{tot}}|,
+T = k E_{\text{tot}},
 $$
 
 where $k > 0$, so:
 
 $$
-\dot{L} = E_{\text{tot}} \cdot k |E_{\text{tot}}| \cdot u \geq 0,
+\dot{L} = E_{\text{tot}} \cdot k E_{\text{tot}} \cdot u = k E_{\text{tot}}^2 u \leq 0,
 $$
 
 since $u \leq 0$. If $u > 0$, adjust:
